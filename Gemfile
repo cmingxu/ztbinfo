@@ -1,4 +1,5 @@
-source 'https://rubygems.org'
+source 'http://ruby.taobao.org/'  
+
 
 gem 'rails', '3.2.6'
 
@@ -20,7 +21,14 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :development do
+  gem 'rspec-rails'
+end
+
+gem 'bootstrap-sass'
 gem 'jquery-rails'
+gem 'devise'
+gem 'haml'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
