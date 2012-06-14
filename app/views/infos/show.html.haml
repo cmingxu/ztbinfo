@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @info.title
+%p
+  %b Url:
+  = @info.url
+%p
+  %b Content:
+  = @info.content
+%p
+  %b Contact:
+  = @info.contact
+%p
+  %b Pushlish at:
+  = @info.pushlish_at
+%p
+  %b Original site:
+  = @info.original_site
+
+= link_to 'Edit', edit_info_path(@info)
+\|
+= link_to 'Back', infos_path

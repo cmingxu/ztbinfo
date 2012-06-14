@@ -1,0 +1,29 @@
+%h1 Listing infos
+
+%table
+  %tr
+    %th Title
+    %th Url
+    %th Content
+    %th Contact
+    %th Pushlish at
+    %th Original site
+    %th
+    %th
+    %th
+
+  - @infos.each do |info|
+    %tr
+      %td= info.title
+      %td= info.url
+      %td= info.content
+      %td= info.contact
+      %td= info.pushlish_at
+      %td= info.original_site
+      %td= link_to 'Show', info
+      %td= link_to 'Edit', edit_info_path(info)
+      %td= link_to 'Destroy', info, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Info', new_info_path
